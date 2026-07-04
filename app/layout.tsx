@@ -24,9 +24,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://subhawk.io"),
   title: "SubHawk: track subscriptions and free trials",
   description:
     "Never get charged by surprise again. Track every subscription and free trial. No bank details required.",
+  openGraph: {
+    title: "SubHawk: track subscriptions and free trials",
+    description:
+      "Never get charged by surprise again. Track every subscription and free trial. No bank details required.",
+    url: "https://subhawk.io",
+    siteName: "SubHawk",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
