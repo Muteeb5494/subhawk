@@ -227,6 +227,20 @@ export default async function Home() {
         >
           Contact
         </Link>
+        <span className="mx-2">·</span>
+        <Link
+          href="/privacy"
+          className="transition hover:text-slate-600 dark:hover:text-slate-300"
+        >
+          Privacy
+        </Link>
+        <span className="mx-2">·</span>
+        <Link
+          href="/terms"
+          className="transition hover:text-slate-600 dark:hover:text-slate-300"
+        >
+          Terms
+        </Link>
       </footer>
     </div>
   );
