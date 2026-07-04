@@ -42,11 +42,11 @@ Development**:
 
 | Name | Value |
 |---|---|
-| `NEXT_PUBLIC_SUPABASE_URL` | `https://pefcmolfvadnujxupxeq.supabase.co` |
+| `NEXT_PUBLIC_SUPABASE_URL` | `https://YOUR-PROJECT-ref.supabase.co` |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | `sb_publishable_…` (your anon key) |
 | `RESEND_API_KEY` | `re_…` (your Resend key) |
 | `REMINDER_FROM_EMAIL` | `onboarding@resend.dev` |
-| `CRON_SECRET` | `a6406736e0cdc1ad6752aad680840aed41b5de49494d22b32efe5a1f1cb53f2c` |
+| `CRON_SECRET` | a long random string, e.g. output of `openssl rand -hex 32` |
 | `SUPABASE_SERVICE_ROLE_KEY` | `sb_secret_…` (your service-role key) |
 
 Setting `CRON_SECRET` here is what lets Vercel Cron authenticate to the reminder
@@ -79,7 +79,7 @@ change the time by editing `vercel.json` and redeploying.
 
 ```bash
 curl -i https://subhawk-xxx.vercel.app/api/cron/reminders \
-  -H "Authorization: Bearer a6406736e0cdc1ad6752aad680840aed41b5de49494d22b32efe5a1f1cb53f2c"
+  -H "Authorization: Bearer YOUR_CRON_SECRET"
 ```
 
 Expect `{"ok":true,...}`. Without the header it returns 401 — that's correct.
