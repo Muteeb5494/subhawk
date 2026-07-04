@@ -30,6 +30,12 @@ export default async function DashboardLayout({
               {user.email}
             </span>
             <Link
+              href="/contact"
+              className="text-sm font-medium text-slate-600 transition hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
+            >
+              Feedback
+            </Link>
+            <Link
               href="/dashboard/settings"
               className="text-sm font-medium text-slate-600 transition hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
             >
