@@ -220,6 +220,13 @@ export default async function Home() {
 
       <footer className="border-t border-slate-200 py-6 text-center text-sm text-slate-400 dark:border-slate-800 dark:text-slate-500">
         © {new Date().getFullYear()} SubHawk
+        <span className="mx-2">·</span>
+        <Link
+          href="/contact"
+          className="transition hover:text-slate-600 dark:hover:text-slate-300"
+        >
+          Contact
+        </Link>
       </footer>
     </div>
   );
