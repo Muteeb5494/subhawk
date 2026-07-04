@@ -173,6 +173,16 @@ function CredentialsForm({
           className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-900 outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-slate-700 dark:text-slate-100"
           placeholder={mode === "signup" ? "At least 8 characters" : "••••••••"}
         />
+        {mode === "login" && (
+          <p className="mt-2 text-right text-xs">
+            <Link
+              href="/forgot-password"
+              className="text-slate-500 transition hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200"
+            >
+              Forgot password?
+            </Link>
+          </p>
+        )}
       </div>
 
       {state?.error && (
