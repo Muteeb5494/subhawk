@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
+import { SpendCalculator } from "./spend-calculator";
 
 const card =
   "rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900 motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-1 hover:border-accent dark:hover:border-accent";
@@ -70,63 +71,9 @@ export default async function Home() {
           </p>
         </section>
 
-        {/* Product preview */}
+        {/* Spend calculator */}
         <section className="mx-auto mt-10 w-full max-w-lg px-4">
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-            <div className="flex gap-8">
-              <div>
-                <p className="text-xs text-slate-400 dark:text-slate-500">
-                  Estimated monthly spend
-                </p>
-                <p className="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
-                  $114.45
-                </p>
-              </div>
-              <div>
-                <p className="text-xs text-slate-400 dark:text-slate-500">
-                  Estimated yearly spend
-                </p>
-                <p className="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
-                  $1,373.40
-                </p>
-              </div>
-            </div>
-            <ul className="mt-4 space-y-2" aria-label="Example subscriptions">
-              <li className="flex items-center justify-between rounded-xl border border-red-300 px-3 py-2.5 ring-1 ring-red-200 dark:border-red-500/40 dark:ring-red-500/20 motion-safe:transition motion-safe:hover:-translate-y-0.5">
-                <span className="text-sm font-medium text-slate-900 dark:text-slate-100">
-                  YouTube Premium{" "}
-                  <span className="font-normal text-slate-500 dark:text-slate-400">
-                    $13.99
-                  </span>
-                </span>
-                <span className="rounded-full bg-red-100 px-2 py-0.5 text-xs font-semibold text-red-700 dark:bg-red-500/15 dark:text-red-300">
-                  Renews today
-                </span>
-              </li>
-              <li className="flex items-center justify-between rounded-xl border border-amber-300 px-3 py-2.5 ring-1 ring-amber-200 dark:border-amber-500/40 dark:ring-amber-500/20 motion-safe:transition motion-safe:hover:-translate-y-0.5">
-                <span className="text-sm font-medium text-slate-900 dark:text-slate-100">
-                  Disney+{" "}
-                  <span className="font-normal text-slate-500 dark:text-slate-400">
-                    Free trial
-                  </span>
-                </span>
-                <span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-800 dark:bg-amber-400/15 dark:text-amber-300">
-                  Trial ends in 3 days
-                </span>
-              </li>
-              <li className="flex items-center justify-between rounded-xl border border-slate-200 px-3 py-2.5 dark:border-slate-800 motion-safe:transition motion-safe:hover:-translate-y-0.5">
-                <span className="text-sm font-medium text-slate-900 dark:text-slate-100">
-                  Netflix{" "}
-                  <span className="font-normal text-slate-500 dark:text-slate-400">
-                    $15.49
-                  </span>
-                </span>
-                <span className="text-xs text-slate-400 dark:text-slate-500">
-                  Renews in 12 days
-                </span>
-              </li>
-            </ul>
-          </div>
+          <SpendCalculator />
         </section>
 
         {/* How it works */}
